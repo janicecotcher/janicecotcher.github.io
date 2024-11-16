@@ -14,10 +14,56 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
     text-align: center;
     color: white;
   }
-  .bottom-centered {
+  .banner-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    display: inline-block;
+  }
+
+  .banner-image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .name-overlay {
     position: absolute;
-    top: 80%;
-    left: 10%;
+    bottom: 5px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 10px;
+    white-space: nowrap;
+  }
+
+  .name-text {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+    /* Base size for small screens */
+    font-size: 2.5rem;
+  }
+
+  /* Responsive text scaling */
+  @media (min-width: 640px) {
+    .name-text {
+      font-size: 3rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .name-text {
+      font-size: 3.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .name-text {
+      font-size: 4rem;
+    }
   }
 </style>
 </head>
@@ -31,9 +77,11 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
   
     <!-- Left Column -->
     <div class="w3-third">
-        <div class="container">
-          <img src="./images/profile_pic.jpeg" style="width:100%" alt="Avatar">
-          <div class="bottom-centered"><h1 style="font-size:3em;"><b>Janice Cotcher</b></h1></div>
+      <div class="banner-container">
+          <img src="./images/profile_pic.jpeg" alt="Profile background" class="banner-image">
+          <div class="name-overlay">
+            <h1 class="name-text">Janice Cotcher</h1>
+          </div>
         </div>
         <div class="w3-white w3-text-grey w3-card-4">
         <div class="w3-container">
