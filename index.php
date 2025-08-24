@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<title>Janice Cotcher's CV</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style type="text/css">
+    :root {
+    /*Colours*/
+    --text-primary: black;
+    --text-secondary: white;
+    --background-primary: white;
+    --background-secondary:black;
+    --text-error: red;
+    --border-colour: var(--text-primary);
+
+    /*Typography*/
+    --font-family: Helvetica, Arial, sans-serif;
+    --font-size-base: 1rem;
+    --font-size-large: 4rem;
+
+    /*Spacing*/
+    --spacing-base: 1rem;
+
+    /*Border properties*/
+    --border-radius: 8px;
+    --border-radius: 0.25 * var(--border-radius);
+    --shadow: var(--border-radius-xs) var(--border-radius-xs) 1px 0.5px var(--text-primary);
+}
+.page-grid{
+        display: grid;
+        grid-template-rows: auto 8fr 5fr 8fr 5fr auto;
+        max-width: 1600px;
+        max-height: none;
+        margin:0;
+        padding:0;
+    }
+
+.header{
+    grid-row:1;
+    display: grid;
+    grid-template-columns: 0.5fr 8fr 1fr 1fr 1fr 0.5fr;
+    background-color: var(--background-secondary);
+    color: var(--text-secondary);
+    text-align: center;
+}
+.header-leftaside{
+    grid-column: 1;
+}
+.header-name{
+    grid-column: 2;
+    font-size: var(--font-size-large);
+
+}
+.header-aboutme{
+    grid-column: 3;
+}
+.header-work{
+    grid-column: 4;
+}
+.header-contact{
+    grid-column: 5;
+}
+.header-rightaside{
+    grid-column: 6;
+}
+
+.title-grid{
+    grid-row: 2;
+    background-color: var(--background-primary);
+    color: var(--text-primary);
+}
+
+.about-me{
+    grid-row: 3;
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+    background-color: var(--background-secondary);
+    color: var(--text-secondary);
+}
+.about-me-left{
+    grid-column: 1;
+    padding: var(--spacing-base);
+    text-align: right;
+    justify-self: end;
+}
+.about-me-right{
+    grid-column: 2;
+    padding: var(--spacing-base);
+}
+
+.work{
+    grid-row: 4;
+    background-color: var(--background-primary);
+    color: var(--text-primary);
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+.tech{
+    grid-row: 1;
+    grid-column: 1;
+    text-align: center;
+    justify-self: right;
+}
+.teaching{
+    grid-row:1;
+    grid-column: 2;
+    text-align: center;
+    justify-self: left;
+}
+.writing{
+    grid-row:2;
+    grid-column: 1;
+    text-align: start;
+    justify-self: right;
+}
+.blog{
+    grid-column: 2;
+    grid-row: 2;
+    text-align: start;
+    justify-self: left;
+}
+
+.contact-container{
+    grid-row:5;
+    background-color: var(--background-secondary);
+    color: var(--text-secondary);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 3fr 1fr;
+}
+.footer{
+    grid-row:6;
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+    background-color: var(--background-primary);
+    color: var(--text-primary);
+}
+.site{
+    font-size: 1rem;
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: var(--background-primary);
+    color: var(--text-primary);
+}
+</style>
+
+<link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+
+<link rel="preload" 
+          fetchpriority="high" href="images/feature.webp"
+          as="image" 
+          imagesrcset="images/feature_small.webp 480w,
+            images/feature_medium.webp 396w,
+            images/feature_large.webp 1200w,
+            images/feature.webp 1319w">
+<meta name="description" content="Janice Cotcher's professional CV and portfolio showcasing tech projects, teaching resources, and writing.">
+</head>
+<body class="site">
+    <div class="page-grid">
+    <div class="header">
+        <div class="header-leftaside"></div>
+        <div class="header-name">Janice Cotcher</div>
+        <div class="header-aboutme">About Me</div>
+        <div class="header-work">My Work</div>
+        <div class="header-contact">Contact</div>
+        <div class="header-rightaside"></div>
+    </div>
+    <div class="title-grid">
+        <picture>
+            <img src="images/feature.webp"
+                fetchpriority="high"
+                srcset="images/feature_small.webp 480w,
+                        images/feature_medium.webp 396w,
+                        images/feature_large.webp 1200w,
+                        images/feature.webp 1319w"
+                width="1319"
+                height="508"
+                alt="Sunset at the Saskatchewan Legislature">
+        </picture>
+    </div>
+    <div class="about-me">
+        <div class="about-me-left">Picture of me </br>
+            <picture>
+                <img src="images/janice_cotcher.webp"
+                fetchpriority="high"
+                srcset="images/janice_cotcher_small.webp 172w,
+                        images/janice_cotcher_medium.webp 300w,
+                        images/janice_cotcher.webp 400w"
+                width="400"
+                height="376"
+                alt="Profile picture of Janice Cotcher">
+            </picture>
+        </div>
+        <div class="about-me-right">Description of me and CV link</div>
+    </div>
+    <div class="work">
+        <div class="tech">tech projects</div>
+        <div class="teaching">teaching resources</div>
+        <div class="writing">think pieces</div>
+        <div class="blog">Blog</div>
+    </work>
+    <div class="contact-container">
+        <div>Contact me</div>
+        <div>Form</div>
+    </div>
+    <div class="footer">Janice Cotcher</div>
+</div>
+</body>
+</html>
