@@ -17,7 +17,9 @@
     /*Typography*/
     --font-family: Helvetica, Arial, sans-serif;
     --font-size-base: 1rem;
+    --font-size-md:1.25rem;
     --font-size-large: 4rem;
+    --font-size-xl: 6rem;
 
     /*Spacing*/
     --spacing-base: 1rem;
@@ -48,9 +50,9 @@
     grid-area: header;
     min-width: 50vw;
     min-height: 10vh;
-    font-size: var(--font-size-large);
-    align-self: center;
-    text-align: center;
+    font-size: var(--font-size-xl);
+    align-self: baseline;
+    text-align: right;
 }
 .menu{
     grid-area: menu;
@@ -58,10 +60,12 @@
     grid-template-columns: 2fr 1fr 1fr 1fr;
     min-width: 50vw;
     min-height: 10vh;
-    align-items: center;
+    align-items: end;
     justify-items: center;
     grid-template-areas:
     "menu-left aboutMe work contact-menu";
+    padding-bottom: var(--spacing-base);
+    font-size: var(--font-size-md);
 }
 .menu-left{
     grid-area: menu-left;
