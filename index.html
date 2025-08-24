@@ -53,11 +53,28 @@
 .menu{
     grid-area: menu;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
     min-width: 50vw;
     min-height: 10vh;
     align-items: center;
     justify-items: center;
+    grid-template-areas:
+    "menu-left aboutMe work contact-menu";
+}
+.menu-left{
+    grid-area: menu-left;
+
+}
+.aboutMe{
+    grid-area: aboutMe;
+}
+
+.work{
+    grid-area: work;
+}
+
+.contact-menu{
+    grid-area: contact-menu;
 }
 
 .title{
