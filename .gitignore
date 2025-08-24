@@ -1,2 +1,19 @@
 .vscode
 CNAME
+# SSH Keys
+id_rsa
+id_rsa.pub
+id_ecdsa
+id_ecdsa.pub
+id_ed25519
+id_ed25519.pub
+*.pem
+*.key
+
+# SSH directory
+.ssh/
+
+# Other sensitive files
+.env
+.env.local
+*.log
