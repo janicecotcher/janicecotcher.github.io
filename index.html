@@ -43,6 +43,7 @@
     background-color: var(--background-secondary);
     color: var(--text-secondary);
     text-align: center;
+    background-image: url("images/feature.webp")
 }
 .header-leftaside{
     grid-column: 1;
@@ -160,53 +161,54 @@
 </head>
 <body class="site">
     <div class="page-grid">
-    <div class="header">
-        <div class="header-leftaside"></div>
-        <div class="header-name">Janice Cotcher</div>
-        <div class="header-aboutme">About Me</div>
-        <div class="header-work">My Work</div>
-        <div class="header-contact">Contact</div>
-        <div class="header-rightaside"></div>
-    </div>
-    <div class="title-grid">
-        <picture>
-            <img src="images/feature.webp"
-                fetchpriority="high"
-                srcset="images/feature_small.webp 480w,
-                        images/feature_medium.webp 396w,
-                        images/feature_large.webp 1200w,
-                        images/feature.webp 1319w"
-                width="1319"
-                height="508"
-                alt="Sunset at the Saskatchewan Legislature">
-        </picture>
-    </div>
-    <div class="about-me">
-        <div class="about-me-left">Picture of me </br>
+        <div class="header">
+            <div class="header-leftaside"></div>
+            <div class="header-name">Janice Cotcher</div>
+            <div class="header-aboutme">About Me</div>
+            <div class="header-work">My Work</div>
+            <div class="header-contact">Contact</div>
+            <div class="header-rightaside"></div>
+        </div>
+        <div class="title-grid">
             <picture>
-                <img src="images/janice_cotcher.webp"
-                fetchpriority="high"
-                srcset="images/janice_cotcher_small.webp 172w,
-                        images/janice_cotcher_medium.webp 300w,
-                        images/janice_cotcher.webp 400w"
-                width="400"
-                height="376"
-                alt="Profile picture of Janice Cotcher">
+                <img src="images/feature.webp"
+                    fetchpriority="high"
+                    srcset="images/feature_small.webp 480w,
+                            images/feature_medium.webp 396w,
+                            images/feature_large.webp 1200w,
+                            images/feature.webp 1319w"
+                    width="1319"
+                    height="508"
+                    alt="Sunset at the Saskatchewan Legislature">
             </picture>
         </div>
+        <div class="about-me">
+            <div class="about-me-left">Picture of me <br/>
+                <picture>
+                    <img src="images/janice_cotcher.webp"
+                    fetchpriority="high"
+                    srcset="images/janice_cotcher_small.webp 172w,
+                            images/janice_cotcher_medium.webp 300w,
+                            images/janice_cotcher.webp 400w"
+                    width="400"
+                    height="376"
+                    alt="Profile picture of Janice Cotcher">
+                </picture>
+            </div>
+        </div>
         <div class="about-me-right">Description of me and CV link</div>
+
+        <div class="work">
+            <div class="tech">tech projects</div>
+            <div class="teaching">teaching resources</div>
+            <div class="writing">think pieces</div>
+            <div class="blog">Blog</div>
+        </div>
+        <div class="contact-container">
+            <div>Contact me</div>
+            <div>Form</div>
+        </div>
+        <div class="footer">Janice Cotcher</div>
     </div>
-    <div class="work">
-        <div class="tech">tech projects</div>
-        <div class="teaching">teaching resources</div>
-        <div class="writing">think pieces</div>
-        <div class="blog">Blog</div>
-    </work>
-    <div class="contact-container">
-        <div>Contact me</div>
-        <div>Form</div>
-    </div>
-    <div class="footer">Janice Cotcher</div>
-</div>
 </body>
 </html>
