@@ -29,114 +29,65 @@
 }
 .page-grid{
         display: grid;
-        grid-template-rows: auto 8fr 5fr 8fr 5fr auto;
-        max-width: 1600px;
-        max-height: none;
-        margin:0;
-        padding:0;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "header header"
+        "title title"
+        "profile-pic about-me"
+        "tech teaching"
+        "writing blog"
+        "contact contact-form";
+        width:100%;
+        min-height:100vh;
     }
 
 .header{
-    grid-row:1;
-    display: grid;
-    grid-template-columns: 0.5fr 8fr 1fr 1fr 1fr 0.5fr;
-    background-color: var(--background-secondary);
-    color: var(--text-secondary);
-    text-align: center;
-    background-image: url("images/feature.webp")
-}
-.header-leftaside{
-    grid-column: 1;
-}
-.header-name{
-    grid-column: 2;
-    font-size: var(--font-size-large);
-
-}
-.header-aboutme{
-    grid-column: 3;
-}
-.header-work{
-    grid-column: 4;
-}
-.header-contact{
-    grid-column: 5;
-}
-.header-rightaside{
-    grid-column: 6;
+    grid-area: "header";
 }
 
-.title-grid{
-    grid-row: 2;
-    background-color: var(--background-primary);
-    color: var(--text-primary);
+.title{
+    grid-area: "title";
+    background-image: url("images/feature.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.profile-pic{
+    grid-area: "profile-pic";
 }
 
 .about-me{
-    grid-row: 3;
-    display:grid;
-    grid-template-columns: 2fr 1fr;
-    background-color: var(--background-secondary);
-    color: var(--text-secondary);
-}
-.about-me-left{
-    grid-column: 1;
-    padding: var(--spacing-base);
-    text-align: right;
-    justify-self: end;
-}
-.about-me-right{
-    grid-column: 2;
-    padding: var(--spacing-base);
+    grid-area: "about-me";
 }
 
-.work{
-    grid-row: 4;
-    background-color: var(--background-primary);
-    color: var(--text-primary);
-    display:grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-}
+
 .tech{
-    grid-row: 1;
-    grid-column: 1;
-    text-align: center;
-    justify-self: right;
+    grid-area: "tech";
 }
 .teaching{
-    grid-row:1;
-    grid-column: 2;
-    text-align: center;
-    justify-self: left;
+    grid-area: "teaching";
+   
 }
 .writing{
-    grid-row:2;
-    grid-column: 1;
-    text-align: start;
-    justify-self: right;
+    grid-area: "writing";
+   
 }
 .blog{
-    grid-column: 2;
-    grid-row: 2;
-    text-align: start;
-    justify-self: left;
+    grid-area: "blog";
+    
 }
 
-.contact-container{
-    grid-row:5;
-    background-color: var(--background-secondary);
-    color: var(--text-secondary);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 3fr 1fr;
+.contact{
+    grid-area: "contact";
+    
+}
+
+.contact-form{
+    grid-area: "contact-form";
 }
 .footer{
-    grid-row:6;
-    display: grid;
-    grid-template-rows: 3fr 1fr;
-    background-color: var(--background-primary);
-    color: var(--text-primary);
+    grid-area: "footer";
 }
 .site{
     font-size: 1rem;
@@ -162,52 +113,28 @@
 <body class="site">
     <div class="page-grid">
         <div class="header">
-            <div class="header-leftaside"></div>
-            <div class="header-name">Janice Cotcher</div>
-            <div class="header-aboutme">About Me</div>
-            <div class="header-work">My Work</div>
-            <div class="header-contact">Contact</div>
-            <div class="header-rightaside"></div>
         </div>
-        <div class="title-grid">
+        <div class="title">
+        </div>
+        <div class="profile-pic">Picture of me <br/>
             <picture>
-                <img src="images/feature.webp"
-                    fetchpriority="high"
-                    srcset="images/feature_small.webp 480w,
-                            images/feature_medium.webp 396w,
-                            images/feature_large.webp 1200w,
-                            images/feature.webp 1319w"
-                    width="1319"
-                    height="508"
-                    alt="Sunset at the Saskatchewan Legislature">
+                <img src="images/janice_cotcher.webp"
+                fetchpriority="high"
+                srcset="images/janice_cotcher_small.webp 172w,
+                        images/janice_cotcher_medium.webp 300w,
+                        images/janice_cotcher.webp 400w"
+                width="400"
+                height="376"
+                alt="Profile picture of Janice Cotcher">
             </picture>
         </div>
-        <div class="about-me">
-            <div class="about-me-left">Picture of me <br/>
-                <picture>
-                    <img src="images/janice_cotcher.webp"
-                    fetchpriority="high"
-                    srcset="images/janice_cotcher_small.webp 172w,
-                            images/janice_cotcher_medium.webp 300w,
-                            images/janice_cotcher.webp 400w"
-                    width="400"
-                    height="376"
-                    alt="Profile picture of Janice Cotcher">
-                </picture>
-            </div>
-        </div>
-        <div class="about-me-right">Description of me and CV link</div>
-
-        <div class="work">
-            <div class="tech">tech projects</div>
-            <div class="teaching">teaching resources</div>
-            <div class="writing">think pieces</div>
-            <div class="blog">Blog</div>
-        </div>
-        <div class="contact-container">
-            <div>Contact me</div>
-            <div>Form</div>
-        </div>
+         <div class="about-me">Description of me and CV link</div>
+        <div class="tech">tech projects</div>
+        <div class="teaching">teaching resources</div>
+        <div class="writing">think pieces</div>
+        <div class="blog">Blog</div>
+        <div class="contact">Contact me</div>
+        <div class="contact-form">Form</div>
         <div class="footer">Janice Cotcher</div>
     </div>
 </body>
