@@ -32,7 +32,7 @@
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
         grid-template-areas:
-        "header header"
+        "header menu"
         "title title"
         "profile-pic about-me"
         "tech teaching"
@@ -44,7 +44,14 @@
 
 .header{
     grid-area: header;
-    min-width: 100vw;
+    min-width: 50vw;
+    min-height: 10vh;
+}
+.menu{
+    grid-area: menu;
+    display: subgrid;
+    grid-template-columns: 1fr 1fr 1fr;
+    min-width: 50vw;
     min-height: 10vh;
 }
 
@@ -109,6 +116,8 @@
 <body class="site">
     <div class="page-grid">
         <div class="header">
+            <div class="name">Janice Cotcher</div>
+            <div class="menu"><div>About Me</div><div>Work</div><div>Contact</div></div>
         </div>
         <div class="title">
         </div>
